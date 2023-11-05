@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,7 +13,7 @@ class MaskedImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       return FutureBuilder<List>(
-        future: _createShaderAndImage(asset, mask, constraints.maxWidth, constraints.maxHeight),
+        future: _createShaderAndImage(asset, mask, min(constraints.maxWidth,constraints.maxHeight) , min(constraints.maxWidth,constraints.maxHeight)),
         builder: (context, snapshot) {
           if (!snapshot.hasData) return const SizedBox.shrink();
           return ShaderMask(

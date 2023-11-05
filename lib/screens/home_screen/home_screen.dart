@@ -84,7 +84,6 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 10),
             if (image != null && selectedShape != Shape.none) Container(
                     margin: const EdgeInsets.symmetric(horizontal: 10),
-                    height: 550,
                     child: selectedShape == Shape.original
                         ? Image.memory(image!)
                         : selectedShape == Shape.heart

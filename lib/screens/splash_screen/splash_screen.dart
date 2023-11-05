@@ -41,10 +41,11 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Image(image: const AssetImage('assets/splash_logo.png'),
-              height: 0.1*h,
+              height: 0.075*h,
               width: 0.3*w,
             ),
-            Text('Celebrare',style: TextStyle(fontFamily: 'DancingScript', color: Colors.grey[600], fontSize: 55), textAlign: TextAlign.center,)
+            Text('Celebrare',style: TextStyle(fontFamily: 'DancingScript', color: Colors.grey[600], fontSize: 55), textAlign: TextAlign.center),
+            Text('Digital Innovations', style: TextStyle(fontSize: 10, color: Colors.grey[600],),)
           ],
         ),
       ),
